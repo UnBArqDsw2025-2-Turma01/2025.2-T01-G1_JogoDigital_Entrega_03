@@ -1,0 +1,65 @@
+site_name: Jogo Digital - Grupo 1
+site_url: https://unbarqdsw2025-2-turma01.github.io/2025.2-T01-G1_JogoDigital_Entrega_03/
+
+repo_url: https://unbarqdsw2025-2-turma01.github.io/2025.2-T01-G1_JogoDigital_Entrega_03/
+repo_name: GitHub
+
+extra:
+ social:
+   - icon: fontawesome/brands/github
+     link: https://unbarqdsw2025-2-turma01.github.io/2025.2-T01-G1_JogoDigital_Entrega_03/
+
+theme:
+ name: material
+ logo: assets/logo/logo.png
+ palette:
+
+   # Palette toggle for automatic mode
+   - media: "(prefers-color-scheme)"
+     toggle:
+       icon: material/brightness-auto
+       name: Switch to light mode
+
+   # Palette toggle for light mode
+   - media: "(prefers-color-scheme: light)"
+     scheme: default 
+     primary: green
+     accent: pink 
+     toggle:
+       icon: material/brightness-7
+       name: Switch to dark mode
+
+   # Palette toggle for dark mode
+   - media: "(prefers-color-scheme: dark)"
+     scheme: slate
+     primary: green
+     toggle:
+       icon: material/brightness-4
+       name: Switch to system preference
+
+ features:
+   - navigation.tabs
+   - content.code.copy
+   - navigation.instant
+   - navigation.instant.progress
+   - navigation.top
+
+nav:
+  - Apresentação: README.md
+  - Atas Reunião:
+    - Entrega 03: 
+      - Ata I: Atas/Entrega 02/Ata I.md 
+      - Ata II: Atas/Entrega 02/Ata II.md
+      - Ata III: Atas/Entrega 02/Ata III.md
+  - 3. Padrões de Projeto:
+      - 3. Padrão de Projeto: PadroesDeProjeto/3.PadroesDeProjeto.md
+      - 3.1. GoFs Criacionais: PadroesDeProjeto/3.1.GoFsCriacionais.md
+      - 3.2. GoFs Estruturais: PadroesDeProjeto/3.2.GoFsEstruturais.md
+      - 3.3. GoFs Comportamentais: PadroesDeProjeto/3.3.GoFsComportamentais.md
+      - 3.4. Participações - GoFs: PadroesDeProjeto/3.4.ParticipacoesPadroes.md
+      - 3.5. Iniciativas Extras - Padroes de Projeto: PadroesDeProjeto/3.5.IniciativasExtras.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
