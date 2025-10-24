@@ -11,7 +11,7 @@ extra:
 
 theme:
  name: material
- logo: assets/logo/logo.png
+#  logo: assets/logo/logo.png
  palette:
 
    # Palette toggle for automatic mode
