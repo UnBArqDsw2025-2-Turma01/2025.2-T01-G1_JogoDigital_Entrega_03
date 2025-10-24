@@ -48,9 +48,9 @@ nav:
   - Apresentação: README.md
   - Atas Reunião:
     - Entrega 03: 
-      - Ata I: Atas/Entrega 02/Ata I.md 
-      - Ata II: Atas/Entrega 02/Ata II.md
-      - Ata III: Atas/Entrega 02/Ata III.md
+      - Ata I: Atas/Entrega 03/Ata I.md 
+      - Ata II: Atas/Entrega 03/Ata II.md
+      - Ata III: Atas/Entrega 03/Ata III.md
   - 3. Padrões de Projeto:
       - 3. Padrão de Projeto: PadroesDeProjeto/3.PadroesDeProjeto.md
       - 3.1. GoFs Criacionais: PadroesDeProjeto/3.1.GoFsCriacionais.md
