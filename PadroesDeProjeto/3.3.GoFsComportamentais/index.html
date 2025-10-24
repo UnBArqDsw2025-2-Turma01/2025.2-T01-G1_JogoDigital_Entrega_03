@@ -1,0 +1,2041 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://unbarqdsw2025-2-turma01.github.io/2025.2-T01-G1_JogoDigital_Entrega_03/PadroesDeProjeto/3.3.GoFsComportamentais/">
+      
+      
+        <link rel="prev" href="../3.2.GoFsEstruturais/">
+      
+      
+        <link rel="next" href="../3.4.ParticipacoesPadroes/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>3.3. GoFs Comportamentais - Jogo Digital - Grupo 1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#33-modulo-padroes-de-projeto-gofs-comportamentais" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Jogo Digital - Grupo 1" class="md-header__button md-logo" aria-label="Jogo Digital - Grupo 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jogo Digital - Grupo 1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3.3. GoFs Comportamentais
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UnBArqDsw2025-2-Turma01/2025.2-T01-G1_JogoDigital_Entrega_03" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Apresentação
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Atas/Entrega%2003/Ata%20I/" class="md-tabs__link">
+          
+  
+  
+  Atas Reunião
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../3.PadroesDeProjeto/" class="md-tabs__link">
+          
+  
+  
+  3. Padrões de Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Jogo Digital - Grupo 1" class="md-nav__button md-logo" aria-label="Jogo Digital - Grupo 1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jogo Digital - Grupo 1
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UnBArqDsw2025-2-Turma01/2025.2-T01-G1_JogoDigital_Entrega_03" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apresentação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Atas Reunião
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Atas Reunião
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrega 03
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Entrega 03
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atas/Entrega%2003/Ata%20I/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atas/Entrega%2003/Ata%20II/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata II
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atas/Entrega%2003/Ata%20III/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ata III
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    3. Padrões de Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            3. Padrões de Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.PadroesDeProjeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Padrão de Projeto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.1.GoFsCriacionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1. GoFs Criacionais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.2.GoFsEstruturais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.2. GoFs Estruturais
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3.3. GoFs Comportamentais
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.3. GoFs Comportamentais
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#331-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Participantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#332-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Metodologia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.2. Metodologia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3321-revisao-e-selecao-de-padroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.1. Revisão e Seleção de Padrões
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3322-aplicacao-e-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.2. Aplicação e Implementação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3323-modelagem-e-documentacao-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.3. Modelagem e Documentação UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3324-demonstracao-e-colaboracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.4. Demonstração e Colaboração
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#333-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3331-diagrama-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3.1. Diagrama UML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.3.1. Diagrama UML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-e-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura e Responsabilidades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-da-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefícios da Aplicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3332-opinioes-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3.2. Opiniões dos Participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3333-video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3.3. Vídeo Demonstrativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#334-iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4. Iterator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.4. Iterator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3341-diagrama-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4.1 Diagrama UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3343-opnioes-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4.3. Opniões dos Participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3344-video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4.4. Vídeo Demonstrativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#335-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5. State
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.5. State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3351-diagrama-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5.1. Diagrama UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3352-opinioes-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5.2. Opiniões dos Participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3353-video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5.3. Vídeo Demonstrativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#336-referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.6 Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões 📅
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.4.ParticipacoesPadroes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.4. Participações - GoFs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.5.IniciativasExtras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.5. Iniciativas Extras - Padroes de Projeto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#331-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Participantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#332-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2. Metodologia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.2. Metodologia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3321-revisao-e-selecao-de-padroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.1. Revisão e Seleção de Padrões
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3322-aplicacao-e-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.2. Aplicação e Implementação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3323-modelagem-e-documentacao-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.3. Modelagem e Documentação UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3324-demonstracao-e-colaboracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2.4. Demonstração e Colaboração
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#333-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3. Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3331-diagrama-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3.1. Diagrama UML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.3.1. Diagrama UML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estrutura-e-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura e Responsabilidades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-da-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefícios da Aplicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3332-opinioes-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3.2. Opiniões dos Participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3333-video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3.3. Vídeo Demonstrativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#334-iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4. Iterator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.4. Iterator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3341-diagrama-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4.1 Diagrama UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3343-opnioes-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4.3. Opniões dos Participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3344-video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4.4. Vídeo Demonstrativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#335-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5. State
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.5. State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3351-diagrama-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5.1. Diagrama UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3352-opinioes-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5.2. Opiniões dos Participantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3353-video-demonstrativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5.3. Vídeo Demonstrativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#336-referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.6 Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões 📅
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="33-modulo-padroes-de-projeto-gofs-comportamentais">3.3. Módulo Padrões de Projeto GoFs Comportamentais</h1>
+<h2 id="331-introducao">3.3.1. Introdução</h2>
+<p>Os <strong>Padrões de Projeto Comportamentais</strong> fazem parte do conjunto de soluções proposto pela "Gang of Four" (GoF) <a href="#REF1">[1]</a> para lidar com desafios recorrentes na modelagem de sistemas orientados a objetos. Enquanto os padrões Criacionais tratam da instânciação de objetos e os Estruturais da organização entre classes e interfaces, os <strong>Comportamentais</strong> concentram-se na <strong>dinâmica da comunicação entre objetos</strong>, promovendo uma colaboração mais eficaz e desacoplada.</p>
+<p>Esses padrões são fundamentais para estabelecer <strong>fluxos de controle flexíveis</strong>, permitindo que algoritmos sejam encapsulados e substituídos sem afetar o restante da aplicação. Ao distribuir responsabilidades de forma estratégica, eles <strong>favorecem a manutenção, extensibilidade e reutilização do código</strong> <a href="#REF2">[2]</a>. No contexto do desenvolvimento de jogos eletrônicos, por exemplo, sua aplicação permite modularizar comportamentos complexos e dinâmicos, como demonstrado por Figueiredo em sua dissertação <a href="#REF3">[3]</a>, tornando os sistemas mais adaptáveis às exigências de interatividade e evolução constante.</p>
+<h2 id="participantes">Participantes</h2>
+<p><font size="3"><p style="text-align: center">Tabela 1: Participantes</p></font></p>
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Função</th>
+      <th>Data</th>
+      <th>Hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/caioduart3">Caio Duarte</a></td>
+      <td>GoF Comportamental - State</td>
+      <td>22/10/2025</td>
+      <td>20:00</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/danielle-soaress">Danielle Soares</a></td>
+      <td>GoF Comportamental - Iterator</td>
+      <td>22/10/2025</td>
+      <td>19:30</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/EnzoEmir">Enzo Emir</a></td>
+      <td>GoF Comportamental - Strategy</td>
+      <td>21/10/2025</td>
+      <td>20:00</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/felixlaryssa">Laryssa Félix</a></td>
+      <td>GoF Comportamental -  Strategy</td>
+      <td>21/10/2025</td>
+      <td>20:00</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/Leticia-Arisa-K-Higa">Leticia Arisa</a></td>
+      <td>GoF Comportamental - Iterator</td>
+      <td>22/10/2025</td>
+      <td>19:30</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/MM4k">Marcelo Makoto</a></td>
+      <td>GoF Comportamental - State</td>
+      <td>22/10/2025</td>
+      <td>20:00</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/dudaa28">Maria Eduarda</a></td>
+      <td>GoF Comportamental - Iterator</td>
+      <td>22/10/2025</td>
+      <td>19:30</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/RafaelSchadt">Rafael Welz</a></td>
+      <td>GoF Comportamental - Strategy</td>
+      <td>21/10/2025</td>
+      <td>20:00</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/VictorPontual">Victor Pontual</a></td>
+      <td>GoF Comportamental - State</td>
+      <td>20/10/2025</td>
+      <td>11:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><font size="2"><p style="text-align: center">Fonte: Equipe do Projeto, 2025.</p></font></p>
+<h2 id="332-metodologia">3.3.2. Metodologia</h2>
+<p>A pesquisa e o desenvolvimento do estudo dos Padrões de Projeto Comportamentais foram conduzidos seguindo uma abordagem prática e colaborativa, focada na aplicação real dos conceitos em um sistema de <em>software</em> existente.</p>
+<h3 id="3321-revisao-e-selecao-de-padroes">3.3.2.1. Revisão e Seleção de Padrões</h3>
+<p>Iniciou-se com a revisão do catálogo de Padrões de Projeto Comportamentais da "Gang of Four" (GoF), conforme introduzido na seção anterior. Foram selecionados os padrões mais relevantes para resolver problemas de interação e comunicação observados no <strong>software interno do jogo</strong>, que está hospedado em um repositório de código separado.</p>
+<h3 id="3322-aplicacao-e-implementacao">3.3.2.2. Aplicação e Implementação</h3>
+<p>Os padrões de projeto selecionados (<em>Strategy</em>, <em>Iterator</em> e <em>State</em>) foram implementados diretamente no código-fonte do <em>software</em> interno do jogo. Esta etapa foi crucial para testar a eficácia dos padrões na redução do acoplamento, melhoria da legibilidade e aumento da flexibilidade do sistema.</p>
+<h3 id="3323-modelagem-e-documentacao-uml">3.3.2.3. Modelagem e Documentação UML</h3>
+<p>Para documentar visualmente a estrutura e a aplicação dos padrões, o <em>software</em> <strong>Draw.io</strong> foi utilizado para a criação de <strong>Diagramas UML (Linguagem de Modelagem Unificada)</strong>. Esses diagramas (principalmente de Classe e/ou Sequência) serviram para mapear as novas interações e relações entre os objetos resultantes da aplicação dos padrões Comportamentais.</p>
+<h3 id="3324-demonstracao-e-colaboracao">3.3.2.4. Demonstração e Colaboração</h3>
+<p>Para garantir a transparência do processo e documentar a participação de cada membro, as sessões de desenvolvimento, discussões técnicas e demonstrações de execução do código foram <strong>gravadas por meio da plataforma Microsoft Teams</strong>. Essas gravações serviram como artefatos de evidência, demonstrando a aplicação prática dos padrões, o fluxo de trabalho colaborativo e a contribuição individual dos membros da equipe na solução dos problemas de design.</p>
+<h2 id="333-strategy"><strong>3.3.3. Strategy</strong></h2>
+<p>O padrão <strong>Strategy</strong> é um dos padrões comportamentais definidos pela Gang of Four (GoF) e tem como objetivo <strong>encapsular algoritmos ou comportamentos distintos dentro de classes separadas</strong>, permitindo que eles sejam intercambiáveis em tempo de execução.
+Em vez de implementar diretamente um comportamento em uma classe, o Strategy propõe que esse comportamento seja delegado a um objeto externo, chamado de estratégia. Isso promove a <strong>flexibilidade e o desacoplamento,</strong> pois novas estratégias podem ser adicionadas ou modificadas sem alterar o código da classe principal.
+Esse padrão é especialmente útil quando há <strong>múltiplas variações de um mesmo processo,</strong> como diferentes formas de ordenação, cálculo ou movimentação em jogos, por exemplo. Ao aplicar o Strategy, o sistema se torna mais extensível e testável.</p>
+<h2 id="3331-diagrama-uml"><strong>3.3.3.1. Diagrama UML</strong></h2>
+<p>O GoF Comportamental <em>Strategy</em> foi aplicado ao projeto, nos seguintes códigos:</p>
+<p><img alt="diretório do código" src="../../assets/GoFsEstruturais/arquivosStrategy.png" /></p>
+<p><font size="2"><p style="text-align: center">Fonte: <a href="https://github.com/felixlaryssa">Laryssa Felix</a>, <a href="" title="https://github.com/EnzoEmir">Enzo Emir</a>, <a href="https://github.com/RafaelSchadt">Rafael Welz</a> , 2025.</p></font></p>
+<details class="note" open="open">
+<summary>Aplicação do Padrão Strategy (Níveis de Dificuldade)</summary>
+<p>O trecho de código a seguir, extraído do arquivo (<code>DifficultySelector.py</code>), demonstra   <br />
+a aplicação do Padrão Strategy através da criação de diferentes estratégias de    <br />
+<em><code>dificuldade</code></em>    (<code>EasyStrategy</code>, <code>NormalStrategy</code> e <code>HardStrategy</code>), todas herdando da interface abstrata <code>StrategyDifficulty</code>.<br />
+O seletor de dificuldade (<code>DifficultySelector</code>) atua como o contexto, delegando dinamicamente o comportamento conforme o nível selecionado pelo jogador.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+        <span class="k">class</span><span class="w"> </span><span class="nc">StrategyDifficulty</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+
+            <span class="nd">@abstractmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_vida</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span> <span class="o">...</span>
+            <span class="nd">@abstractmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_ataque</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span> <span class="o">...</span>
+            <span class="nd">@abstractmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span> <span class="o">...</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">aplicar_regras</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[Core Log] Estratégia de Dificuldade &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39; aplicada.&quot;</span><span class="p">)</span>
+
+
+        <span class="k">class</span><span class="w"> </span><span class="nc">EasyStrategy</span><span class="p">(</span><span class="n">StrategyDifficulty</span><span class="p">):</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_vida</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">0.7</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_ataque</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">0.7</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">0.9</span>
+
+
+        <span class="k">class</span><span class="w"> </span><span class="nc">NormalStrategy</span><span class="p">(</span><span class="n">StrategyDifficulty</span><span class="p">):</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_vida</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">1.0</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_ataque</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">1.0</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">1.0</span>
+
+
+        <span class="k">class</span><span class="w"> </span><span class="nc">HardStrategy</span><span class="p">(</span><span class="n">StrategyDifficulty</span><span class="p">):</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_vida</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">1.5</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_ataque</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">1.5</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_velocidade</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mf">1.2</span>
+
+
+        <span class="k">class</span><span class="w"> </span><span class="nc">DifficultySelector</span><span class="p">:</span>
+            <span class="n">_strategy</span><span class="p">:</span> <span class="n">StrategyDifficulty</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">_nivel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;normal&#39;</span>
+
+            <span class="nd">@classmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">inicializar</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">nivel</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">):</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">set_difficulty</span><span class="p">(</span><span class="n">nivel</span><span class="p">)</span>
+
+            <span class="nd">@classmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">set_difficulty</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">nivel</span><span class="p">):</span>
+                <span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;easy&#39;</span><span class="p">:</span> <span class="n">EasyStrategy</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">:</span> <span class="n">NormalStrategy</span><span class="p">,</span> <span class="s1">&#39;hard&#39;</span><span class="p">:</span> <span class="n">HardStrategy</span><span class="p">}</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">_strategy</span> <span class="o">=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">nivel</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">NormalStrategy</span><span class="p">)()</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">_nivel</span> <span class="o">=</span> <span class="n">nivel</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">_strategy</span><span class="o">.</span><span class="n">aplicar_regras</span><span class="p">()</span>
+
+            <span class="nd">@classmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_vida</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span> <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_strategy</span><span class="o">.</span><span class="n">obter_multiplicador_vida</span><span class="p">()</span>
+            <span class="nd">@classmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_ataque</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span> <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_strategy</span><span class="o">.</span><span class="n">obter_multiplicador_ataque</span><span class="p">()</span>
+            <span class="nd">@classmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">obter_multiplicador_velocidade</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span> <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_strategy</span><span class="o">.</span><span class="n">obter_multiplicador_velocidade</span><span class="p">()</span>
+            <span class="nd">@classmethod</span>
+            <span class="k">def</span><span class="w"> </span><span class="nf">get_current_level</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span> <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_nivel</span>
+</code></pre></div>
+</details>
+<details class="note" open="open">
+<summary>Interface Visual de Seleção de Dificuldade</summary>
+<p>Já a interface visual para essa escolha está definida em <code>src/View/DifficultScreen.py</code>.<br />
+O arquivo <code>DifficultScreen.py</code> controla a lógica de interação do jogador, e o <code>DifficultScreenRenderer.py</code> cuida da renderização dos elementos gráficos da tela de seleção de dificuldade.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">Template.BaseScreen</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseScreen</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">View.DifficultScreen.DifficultScreenRenderer</span><span class="w"> </span><span class="kn">import</span> <span class="n">DifficultScreenRenderer</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">View.ViewRenderer</span><span class="w"> </span><span class="kn">import</span> <span class="n">ViewRenderer</span>  
+    <span class="kn">from</span><span class="w"> </span><span class="nn">View.InputHandler</span><span class="w"> </span><span class="kn">import</span> <span class="n">InputHandler</span><span class="p">,</span> <span class="n">InputType</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Difficulty</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+        <span class="n">EASY</span> <span class="o">=</span> <span class="s2">&quot;easy&quot;</span>
+        <span class="n">MEDIUM</span> <span class="o">=</span> <span class="s2">&quot;medium&quot;</span>
+        <span class="n">HARD</span> <span class="o">=</span> <span class="s2">&quot;hard&quot;</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">DifficultScreen</span><span class="p">(</span><span class="n">BaseScreen</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">difficulties</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">Difficulty</span><span class="o">.</span><span class="n">EASY</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fácil&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s2">&quot;hover_color&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">120</span><span class="p">)},</span>
+                <span class="n">Difficulty</span><span class="o">.</span><span class="n">MEDIUM</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Médio&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s2">&quot;hover_color&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">120</span><span class="p">)},</span>
+                <span class="n">Difficulty</span><span class="o">.</span><span class="n">HARD</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Difícil&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s2">&quot;hover_color&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">220</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">120</span><span class="p">)}</span>
+            <span class="p">}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">selected_difficulty</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">renderer</span> <span class="o">=</span> <span class="n">DifficultScreenRenderer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">handle_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+            <span class="n">tipo</span> <span class="o">=</span> <span class="n">InputHandler</span><span class="o">.</span><span class="n">classificar_evento</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">InputHandler</span><span class="o">.</span><span class="n">mouse_posicao</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">tipo</span> <span class="o">==</span> <span class="n">InputType</span><span class="o">.</span><span class="n">MOUSE</span> <span class="ow">and</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">MOUSEBUTTONDOWN</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">difficulty</span><span class="p">,</span> <span class="n">rect</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">difficulty_rects</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="n">rect</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">selected_difficulty</span> <span class="o">=</span> <span class="n">difficulty</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dificuldade selecionada: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">difficulties</span><span class="p">[</span><span class="n">difficulty</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="k">break</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">_iniciar_jogo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">Core.DifficultySelector</span><span class="w"> </span><span class="kn">import</span> <span class="n">DifficultySelector</span>
+            <span class="n">DifficultySelector</span><span class="o">.</span><span class="n">set_difficulty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_difficulty</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <span class="c1"># a partir daqui o jogo é iniciado com a estratégia selecionada</span>
+</code></pre></div>
+</details>
+<p>Portanto, assim ficou modelado em UML, o padrão Strategy no código do jogo. <a href="https://drive.google.com/file/d/1O_kNfro8bEsn3NAhUfbBjLvCst9_R5q0/view?usp=sharing">Clique aqui</a></p>
+<p><a href="https://drive.google.com/file/d/1O_kNfro8bEsn3NAhUfbBjLvCst9_R5q0/view?usp=sharing"><img alt="Ver UML do Composite" src="../../assets/GoFsEstruturais/Strategy.drawio.webp" /></a></p>
+<p><font size="2"><p style="text-align: center">Fonte: <a href="https://github.com/felixlaryssa">Laryssa Felix</a>, <a href="" title="https://github.com/EnzoEmir">Enzo Emir</a>, <a href="https://github.com/RafaelSchadt">Rafael Welz</a> , 2025.</p></font></p>
+<h4 id="estrutura-e-responsabilidades">Estrutura e Responsabilidades</h4>
+<ul>
+<li>
+<p><strong><code>StrategyDifficulty</code></strong><br />
+Classe abstrata que define o contrato das estratégias de dificuldade, especificando os métodos necessários para determinar os multiplicadores de vida, ataque e velocidade.</p>
+</li>
+<li>
+<p><strong><code>EasyStrategy, NormalStrategy, HardStrategy</code></strong><br />
+Implementações concretas do contrato de <code>StrategyDifficulty</code>.<br />
+Cada uma define seus próprios multiplicadores, influenciando diretamente o equilíbrio do jogo.</p>
+</li>
+<li>
+<p><strong><code>DifficultySelector</code></strong><br />
+Atua como o contexto do padrão.<br />
+Ele gerencia a estratégia ativa e fornece métodos centralizados para recuperar os multiplicadores atuais, tornando a lógica de dificuldade independente da camada de visualização.</p>
+</li>
+<li>
+<p><strong><code>DifficultScreen</code></strong><br />
+Classe responsável pela interação do jogador, exibindo opções de dificuldade e chamando <code>DifficultySelector.set_difficulty()</code> ao iniciar o jogo.</p>
+</li>
+<li>
+<p><strong><code>DifficultScreenRenderer</code></strong><br />
+Responsável pela renderização gráfica da interface, apresentando os cartões de dificuldade com feedback visual (seleção, hover, desabilitado).</p>
+</li>
+</ul>
+<h4 id="beneficios-da-aplicacao">Benefícios da Aplicação</h4>
+<ul>
+<li><strong>Flexibilidade:</strong> novas dificuldades podem ser adicionadas facilmente, bastando criar uma nova classe que herde de <code>StrategyDifficulty</code>.</li>
+<li><strong>Baixo acoplamento:</strong> o código de renderização e interação não depende de detalhes de implementação da dificuldade.</li>
+<li><strong>Extensibilidade:</strong> permite ajustar regras de vida, dano e velocidade sem alterar a estrutura central do jogo.</li>
+<li><strong>Coesão:</strong> cada classe tem uma responsabilidade clara e isolada (render, lógica de input, regras do jogo, etc.).</li>
+</ul>
+<p>Esse design evidencia o uso bem estruturado do <strong>GoF Comportamental Strategy</strong>, ao encapsular variações de comportamento (níveis de dificuldade) em classes independentes e permitir que o jogo altere sua lógica de forma modular, escalável e de fácil manutenção.</p>
+<h3 id="3332-opinioes-dos-participantes">3.3.3.2. Opiniões dos Participantes</h3>
+<p>A elaboração desta etapa foi realizada de forma colaborativa em reunião pelo <strong>Discord</strong>, não gravada,  onde os três membros designados estiveram presentes e participaram ativamente da discussão/elaboração.<br />
+O processo da execução do código foi feito no <strong>Visual Studio Code</strong> e a elaboração da UML foi feita no <strong>Draw.io</strong>, ferramenta que possibilitou a criação e edição simultânea do diagrama, garantindo integração e alinhamento entre os integrantes.  </p>
+<p>Ao longo da atividade, cada integrante trouxe ideias e feedbacks que ajudaram a consolidar um resultado alinhado com a visão do grupo como um todo. Esse processo coletivo contribuiu tanto para a consistência do diagrama quanto para o fortalecimento da colaboração na equipe.</p>
+<details>
+  <summary><strong><a href="https://github.com/EnzoEmir">Enzo Emir</a></strong></summary>
+  <p>Pesquisando percebi que uma vantagem do Strategy é sua contribuição para a testabilidade do sistema. Como os comportamentos estão isolados em classes específicas, é possível testar cada estratégia de forma independente, sem depender do contexto completo. Isso favorece a criação de simulações controladas, especialmente útil em sistemas complexos ou com lógica sensível, como IA de jogos, cálculos financeiros ou regras de negócio.</p>
+</details>
+
+<details>
+  <summary><strong><a href="https://github.com/felixlaryssa">Laryssa Félix</a></strong></summary>
+  <p>O padrão Strategy é uma solução elegante para cenários em que múltiplos comportamentos precisam ser alternados dinamicamente. Sua principal força está na flexibilidade: ao encapsular algoritmos em classes separadas, ele permite que o sistema evolua sem a necessidade de modificar o código existente. Isso é especialmente útil em jogos digitais, onde diferentes estilos de inimigos, níveis de dificuldade ou modos de ataque podem ser implementados como estratégias distintas.</p>
+</details>
+
+<details>
+  <summary><strong><a href="https://github.com/RafaelSchadt">Rafael Schadt</a></strong></summary>
+  <p>A implementação do padrão Strategy para as dificuldades do jogo (Easy, Normal, Hard) pareceu desnecessariamente complexa à primeira vista. Questionei a necessidade de múltiplas classes quando uma condicional básica resolvia. No entanto, o valor veio na prática: encapsular cada regra de dificuldade isoladamente garantiu uma estrutura impecável. A adição de novos modos (mesmo que futuramente) se tornou trivial e limpa, confirmando a eficácia e elegância do padrão.</p>
+</details>
+
+<h3 id="3333-video-demonstrativo">3.3.3.3. Vídeo Demonstrativo</h3>
+<p>Foi gravado, na plataforma do Microsoft Teams, uma reunião para a modelagem UML do padrão Strategy e a execução do código além da explicação do mesmo. Clique <a href="https://youtu.be/62f51kDLWNQ?si=3HCpRg2Mn46kOYO0">aqui</a> para acessar.</p>
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/QKZyKbrpQQ8?si=gybvhCSWl1TLhJGv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<h2 id="334-iterator"><strong>3.3.4. Iterator</strong></h2>
+<p>O padrão Iterator é um padrão de projeto comportamental que fornece uma maneira de sequencialmente os elementos de um objeto de coleção sem expor sua representação interna (lista, pilha, árvore, etc.)</p>
+<p>A intenção principal é permitir que os clientes (código que utiliza a estrutura) percorram a coleção usando uma interface comum, independentemente da estrutura de dados específica que a implementa.</p>
+<h3 id="3341-diagrama-uml"><strong>3.3.4.1 Diagrama UML</strong></h3>
+<p>O GoF Comportamental Interator foi aplicado ao projeto, nos seguintes códigos:</p>
+<details class="note" open="open">
+<summary>Interface Iterador</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Generic</span>
+
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
+
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">IIterator</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Declara as operações necessárias para percorrer uma coleção.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">getNext</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Pega o próximo elemento da iteração.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
+<span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hasMore</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Verifica se ainda há elementos para percorrer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
+<span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">getPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retorna o índice ou posição atual do iterador.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
+<span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">restart</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reinicia o iterador, voltando para a primeira posição.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">IIterableCollection</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Declara um ou mais métodos para obter iteradores.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">createIterator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IIterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Retorna uma nova instância de um iterador compatível.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</details>
+<details class="note" open="open">
+<summary>Iteradores Concretos</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeVar</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.interfaces</span><span class="w"> </span><span class="kn">import</span> <span class="n">IIterator</span><span class="p">,</span> <span class="n">IIterableCollection</span>
+
+
+<span class="c1"># Define que &#39;T&#39; deve ser sempre um tipo de Sprite</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">)</span>
+
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SpriteGroupIterator</span><span class="p">(</span><span class="n">IIterator</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+
+<span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group</span><span class="p">:</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Group</span><span class="p">):</span>
+    <span class="c1"># No exato momento da criação do iterador é tirado um &quot;snapshot&quot;</span>
+    <span class="c1"># (Uma cópia da lista que iterador irá percorrer)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_snapshot</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">sprites</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_snapshot</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_position</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">getNext</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+    <span class="c1"># Pega o próximo elemento da iteração se houver</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasMore</span><span class="p">():</span>
+        <span class="n">sprite</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snapshot</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_position</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_position</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">sprite</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">(</span><span class="s2">&quot;Não há mais elementos na iteração.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hasMore</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="c1"># Verifica se há mais elementos para iterar</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_position</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_count</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">getPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="c1"># Retorna a posição atual do iterador</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_position</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">restart</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Reinicia o iterador, voltando para a primeira posição do snapshot</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_position</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">IterableSpriteGroup</span><span class="p">(</span><span class="n">IIterableCollection</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="c1"># Essa classe age como um adaptador para pygame.sprite.Group</span>
+
+<span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group</span><span class="p">:</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Group</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_group</span> <span class="o">=</span> <span class="n">group</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">createIterator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IIterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="c1"># Cria um novo iterador, que vai tirar um novo snapshot</span>
+    <span class="k">return</span> <span class="n">SpriteGroupIterator</span><span class="p">[</span><span class="n">T</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">_group</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_raw_group</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Group</span><span class="p">:</span>
+    <span class="c1"># Método auxiliar para acessar o grupo original, se necessário</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group</span>
+</code></pre></div>
+</details>
+<details class="note" open="open">
+<summary>Cliente</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Model.interfaces</span><span class="w"> </span><span class="kn">import</span> <span class="n">IIterableCollection</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Model.Defense.caipora</span><span class="w"> </span><span class="kn">import</span> <span class="n">Caipora</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Model.Enemies.enemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enemy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Model.Items.arrow</span><span class="w"> </span><span class="kn">import</span> <span class="n">Arrow</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PhysicsEngine</span><span class="p">:</span>
+<span class="nd">@classmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">processar_colisoes</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">,</span>
+    <span class="n">projeteis_col</span><span class="p">:</span> <span class="n">IIterableCollection</span><span class="p">[</span><span class="n">Arrow</span><span class="p">],</span>
+    <span class="n">inimigos_col</span><span class="p">:</span> <span class="n">IIterableCollection</span><span class="p">[</span><span class="n">Enemy</span><span class="p">],</span>
+    <span class="n">caiporas_col</span><span class="p">:</span> <span class="n">IIterableCollection</span><span class="p">[</span><span class="n">Caipora</span><span class="p">]</span>
+<span class="p">):</span>
+    <span class="c1"># Colisão de projéteis com inimigos</span>
+
+
+    <span class="c1"># Pega o iterador de projéteis e cria um snapshot da lista de projéteis</span>
+    <span class="n">iter_projeteis</span> <span class="o">=</span> <span class="n">projeteis_col</span><span class="o">.</span><span class="n">createIterator</span><span class="p">()</span>
+
+    <span class="c1"># Percorre o snapshot de projéteis</span>
+    <span class="k">while</span> <span class="n">iter_projeteis</span><span class="o">.</span><span class="n">hasMore</span><span class="p">():</span>
+        <span class="n">projetil</span> <span class="o">=</span> <span class="n">iter_projeteis</span><span class="o">.</span><span class="n">getNext</span><span class="p">()</span>
+
+        <span class="c1"># Para cada projétil é criado um novo iterador de inimigos</span>
+        <span class="n">iter_inimigos</span> <span class="o">=</span> <span class="n">inimigos_col</span><span class="o">.</span><span class="n">createIterator</span><span class="p">()</span>
+
+        <span class="c1">#Percorre o snapshot de inimigos</span>
+        <span class="k">while</span> <span class="n">iter_inimigos</span><span class="o">.</span><span class="n">hasMore</span><span class="p">():</span>
+            <span class="n">inimigo</span> <span class="o">=</span> <span class="n">iter_inimigos</span><span class="o">.</span><span class="n">getNext</span><span class="p">()</span>
+
+            <span class="c1"># Checa colisão entre o projétil e o inimigo</span>
+            <span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">collide_rect</span><span class="p">(</span><span class="n">projetil</span><span class="p">,</span> <span class="n">inimigo</span><span class="p">):</span>
+
+                <span class="c1"># Usa o dano do projétil para reduzir a vida do inimigo</span>
+                <span class="n">inimigo</span><span class="o">.</span><span class="n">health</span> <span class="o">-=</span> <span class="n">projetil</span><span class="o">.</span><span class="n">damage</span>
+
+                <span class="k">if</span> <span class="n">inimigo</span><span class="o">.</span><span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">inimigo</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span> <span class="c1"># Remove do grupo original</span>
+                <span class="n">projetil</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span> <span class="c1"># Remove o projétil do grupo original</span>
+                <span class="k">break</span>
+
+    <span class="c1"># Colisão de inimigos com defesas</span>
+
+    <span class="c1"># Cria uma nova iteração de inimigos</span>
+    <span class="n">iter_inimigos_ataque</span> <span class="o">=</span> <span class="n">inimigos_col</span><span class="o">.</span><span class="n">createIterator</span><span class="p">()</span>
+
+    <span class="c1"># Percorre o snapshot de inimigos</span>
+    <span class="k">while</span> <span class="n">iter_inimigos_ataque</span><span class="o">.</span><span class="n">hasMore</span><span class="p">():</span>
+        <span class="n">inimigo</span> <span class="o">=</span> <span class="n">iter_inimigos_ataque</span><span class="o">.</span><span class="n">getNext</span><span class="p">()</span>
+
+        <span class="c1"># Para cada inimigo, cria um novo iterador de Caiporas</span>
+        <span class="n">iter_caiporas</span> <span class="o">=</span> <span class="n">caiporas_col</span><span class="o">.</span><span class="n">createIterator</span><span class="p">()</span>
+        <span class="n">defesas_na_linha</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Lista temporária</span>
+
+        <span class="c1"># Percorre o snapshot de Caiporas</span>
+        <span class="k">while</span> <span class="n">iter_caiporas</span><span class="o">.</span><span class="n">hasMore</span><span class="p">():</span>
+            <span class="n">defesa</span> <span class="o">=</span> <span class="n">iter_caiporas</span><span class="o">.</span><span class="n">getNext</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">defesa</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">==</span> <span class="n">inimigo</span><span class="o">.</span><span class="n">grid_y</span><span class="p">:</span>
+                <span class="n">defesas_na_linha</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">defesa</span><span class="p">)</span>
+
+
+        <span class="c1"># Lógica de ataque</span>
+        <span class="n">atacou_alguem</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">defesa</span> <span class="ow">in</span> <span class="n">defesas_na_linha</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">collide_rect</span><span class="p">(</span><span class="n">inimigo</span><span class="p">,</span> <span class="n">defesa</span><span class="p">):</span>
+                <span class="n">inimigo</span><span class="o">.</span><span class="n">is_attacking</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">atacou_alguem</span> <span class="o">=</span> <span class="kc">True</span>
+
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">inimigo</span><span class="p">,</span> <span class="s1">&#39;attack&#39;</span><span class="p">):</span>
+                    <span class="n">inimigo</span><span class="o">.</span><span class="n">attack</span><span class="p">(</span><span class="n">defesa</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">defesa</span><span class="o">.</span><span class="n">health</span> <span class="o">-=</span> <span class="n">inimigo</span><span class="o">.</span><span class="n">damage</span> <span class="o">*</span> <span class="mf">0.1</span>
+
+                <span class="k">if</span> <span class="n">defesa</span><span class="o">.</span><span class="n">health</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">defesa</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+
+                <span class="k">break</span> <span class="c1"># Inimigo ataca apenas uma defesa por vez</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">atacou_alguem</span><span class="p">:</span>
+            <span class="n">inimigo</span><span class="o">.</span><span class="n">is_attacking</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+</details>
+<p>Portanto, assim ficou o modelado em UML, o padrão Iterator no código do jogo. Clique aqui para <a href="https://lucid.app/lucidchart/a58df264-4099-40c8-a297-f861f85902dc/edit?viewport_loc=96%2C171%2C928%2C969%2CHWEp-vi-RSFO&amp;invitationId=inv_6291038a-46f6-46f2-bd92-54e99f058a5e">acessar</a>:</p>
+<p><a href="https://lucid.app/lucidchart/a58df264-4099-40c8-a297-f861f85902dc/edit?viewport_loc=96%2C171%2C928%2C969%2CHWEp-vi-RSFO&amp;invitationId=inv_6291038a-46f6-46f2-bd92-54e99f058a5e"><img alt="Ver UML do Iterator" src="../../assets/GoFsComportamentais/Iterator.svg" /></a></p>
+<p>O diagrama acima ilustra a arquitetura de classes responsável pelo <strong>processamento de colisões</strong> no jogo, evidenciando como o <strong>Padrão de Projeto Iterador</strong> foi aplicado para permitir que a lógica de física percorra diferentes coleções de entidades (como inimigos, projéteis e defesas) de maneira uniforme.</p>
+<p>No centro do padrão, encontram-se as duas interfaces principais:</p>
+<ul>
+<li>
+<p><strong>IterableCollection (Agregado):</strong> Define a interface para as coleções que podem ser percorridas. Sua responsabilidade principal é declarar o método de fábrica <strong>createIterator()</strong>, que retorna um objeto Iterador.</p>
+</li>
+<li>
+<p><strong>Iterator:</strong> Define a interface comum para percorrer os elementos da coleção, abstraindo a estrutura interna. Ela inclui métodos essenciais como <strong>getNext()</strong> (para obter o próximo item) e <strong>hasMore()</strong> (para verificar se a iteração terminou).</p>
+</li>
+</ul>
+<p>Abaixo, estão as implementações concretas dessas interfaces:</p>
+<ul>
+<li>
+<p><strong>IterableSpriteGroup (Agregado Concreto):</strong> É a classe que representa a coleção de sprites em si (provavelmente encapsulando um <strong>pygame.sprite.Group</strong>). Ela implementa <strong>IterableCollection</strong> e sabe como criar seu iterador específico.</p>
+</li>
+<li>
+<p><strong>SpriteGroupIterator (Iterador Concreto):</strong> É a classe que implementa a interface <strong>Iterator</strong>, contendo a lógica específica para percorrer os elementos dentro de um <strong>IterableSpriteGroup</strong>.</p>
+</li>
+</ul>
+<p>Finalmente, a classe <strong>PhysicsEngine</strong> atua como o Cliente do padrão. Ela depende apenas das interfaces (<strong>IterableCollection</strong> e <strong>Iterator</strong>), e não das implementações concretas.</p>
+<p>Como visto no código, o método <strong>processar_colisoes</strong> recebe coleções (como <strong>projeteis_col</strong>, <strong>inimigos_col</strong>) que obedecem à interface <strong>IIterableCollection</strong>. Dentro do método, em vez de acessar diretamente a estrutura de dados dessas coleções, o <strong>PhysicsEngine</strong> solicita um iterador através de <strong>projeteis_col.createIterator()</strong>.</p>
+<p>Em seguida, ele usa os métodos da interface do iterador (<strong>while iter_projeteis.hasMore():</strong> e <strong>projetil = iter_projeteis.getNext()</strong>) para processar cada elemento.</p>
+<h3 id="3343-opnioes-dos-participantes"><strong>3.3.4.3. Opniões dos Participantes</strong></h3>
+<details>
+  <summary><strong><a href="https://github.com/danielle-soaress">Danielle Soares</a></strong></summary>
+  <p> A minha experiência foi que eu achei um pouco difícil entender o Iterator dentro do nosso projeto.
+  Geralmente, os exemplos que vemos relacionados a jogos estão sempre ligados a níveis, um nível leva a outro, que leva a outro, e assim por diante. É necessário ter um iterator que aponte para o próximo nível, e depois para o próximo, e para o próximo.
+  Como a gente ainda não tem o código totalmente implementado, não conseguíamos visualizar essa lógica de níveis claramente. Tivemos que buscar essa lógica do iterator dentro do que já estava implementado, e isso foi um pouco difícil de identificar.
+  Mas depois que entendemos o conceito, tudo ficou mais tranquilo. É um conceito simples, mas o nome e toda a ideia por trás dele, quando a gente vê pela primeira vez, podem assustar um pouco. </p>
+</details>
+
+<details>
+  <summary><strong><a href="https://github.com/Leticia-Arisa-K-Higa">Leticia Arisa</a></strong></summary>
+  <p> Sobre o Iterator, no começo foi um pouco difícil para mim entender como o código funcionava, mas depois comecei a compreender melhor. Quando parei para estudar com calma, percebi que não era tão difícil assim. </p>
+</details>
+
+<details>
+  <summary><strong><a href="https://github.com/dudaa28">Maria Eduarda</a></strong></summary>
+  <p> Basicamente, a minha experiência foi um pouco complicada, principalmente por eu ainda ter pouca base em orientação a objetos. Então, ligar esse conhecimento com o padrão de projeto comportamental e tentar entender como ele funcionaria dentro do nosso projeto foi bastante difícil para mim.
+  Felizmente, eu tive ajuda das minhas colegas de trabalho, o que tornou o processo um pouco mais tranquilo. Aos poucos, fui conseguindo entender e conectar tudo. Quando a gente vai conversando e trocando ideias, o entendimento flui melhor e conseguimos construir juntos.
+  No fim, apesar de ter sido uma experiência difícil no começo, depois da nossa apresentação eu consegui compreender bem o conceito, e fiquei satisfeita com o resultado. </p>
+</details>
+
+<h3 id="3344-video-demonstrativo"><strong>3.3.4.4. Vídeo Demonstrativo</strong></h3>
+<p>Foi gravado, na plataforma do Microsoft Teams, uma reunião para a modelagem UML do padrão Iterator e a explicação do mesmo. Clique <a href="https://www.youtube.com/watch?v=ZHCbX79w1hM">aqui</a> para acessar.</p>
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZHCbX79w1hM?si=EZVL_sRIikmOMIcO" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h2 id="335-state"><strong>3.3.5. State</strong></h2>
+<p>O padrão <strong>State</strong> é um padrão de projeto comportamental que permite a um objeto <strong>alterar seu comportamento quando seu estado interno muda</strong>. O objeto parecerá mudar de classe <a href="#REF4">[4]</a>.</p>
+<p>A intenção principal é permitir que um objeto altere seu comportamento sem mudar sua classe, encapsulando os comportamentos associados a estados específicos em objetos separados.</p>
+<h3 id="3351-diagrama-uml">3.3.5.1. Diagrama UML</h3>
+<p>O GoF Comportamental <em>State</em> foi aplicado ao projeto, no seguinte código:</p>
+<p><img alt="diretório do código" src="../../assets/GoFsComportamentais/state_code_tree.png" /></p>
+<details class="note" open="open">
+<summary>Aplicação do Padrão State (Gerenciamento de Comportamento)</summary>
+<p>O trecho de código a seguir, extraído do arquivo <code>AttackingState.py</code>, demonstra a implementação do Padrão State.
+A classe <code>AttackingState</code> encapsula o comportamento de uma unidade de defesa quando está no estado de ataque. Ela gerencia a lógica de animação, a transição para outros estados (como <code>IdleState</code>) e a execução de ações específicas, como <code>atirar()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">AttackingState</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">enter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">defense</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">defense</span><span class="o">.</span><span class="n">atacando</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">defense</span><span class="o">.</span><span class="n">animation_timer</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">defense</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">] Entrando em AttackingState&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">exit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">defense</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">defense</span><span class="o">.</span><span class="n">atacando</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">defense</span><span class="o">.</span><span class="n">frame_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">defense</span><span class="p">,</span> <span class="s1">&#39;frames&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">defense</span><span class="o">.</span><span class="n">frames</span><span class="p">:</span>
+            <span class="n">defense</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">defense</span><span class="o">.</span><span class="n">frames</span><span class="p">[</span><span class="n">defense</span><span class="o">.</span><span class="n">frame_index</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">defense</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">Model.sprite_groups</span><span class="w"> </span><span class="kn">import</span> <span class="n">sprite_manager</span>
+        <span class="n">inimigos_grupo</span> <span class="o">=</span> <span class="n">sprite_manager</span><span class="o">.</span><span class="n">inimigos</span>
+
+        <span class="n">alvo_na_linha</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span>
+            <span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">inimigos_grupo</span> 
+            <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">grid_y</span> <span class="o">==</span> <span class="n">defense</span><span class="o">.</span><span class="n">grid_y</span> <span class="ow">and</span> <span class="n">e</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;</span> <span class="n">defense</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">right</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">alvo_na_linha</span><span class="p">:</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">Model.Defense.IdleState</span><span class="w"> </span><span class="kn">import</span> <span class="n">IdleState</span>
+            <span class="n">defense</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">IdleState</span><span class="p">())</span>
+            <span class="k">return</span>
+
+        <span class="n">defense</span><span class="o">.</span><span class="n">animation_timer</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">defense</span><span class="o">.</span><span class="n">animation_timer</span> <span class="o">&gt;=</span> <span class="n">defense</span><span class="o">.</span><span class="n">frame_duration</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">defense</span><span class="o">.</span><span class="n">frame_index</span> <span class="o">==</span> <span class="n">defense</span><span class="o">.</span><span class="n">FRAME_DE_TIRO</span><span class="p">:</span>
+                <span class="n">defense</span><span class="o">.</span><span class="n">atirar</span><span class="p">()</span>
+
+            <span class="n">defense</span><span class="o">.</span><span class="n">frame_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">defense</span><span class="o">.</span><span class="n">frame_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">defense</span><span class="o">.</span><span class="n">frames</span><span class="p">)</span>
+            <span class="n">defense</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">defense</span><span class="o">.</span><span class="n">frames</span><span class="p">[</span><span class="n">defense</span><span class="o">.</span><span class="n">frame_index</span><span class="p">]</span>
+            <span class="n">defense</span><span class="o">.</span><span class="n">animation_timer</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
+</details>
+<p>Portanto, assim ficou modelado em UML, o padrão State no código do jogo. Clique aqui para <a href="https://app.diagrams.net/#G1-AOeX1dT3uFPnL57hsZd-PovQyqNWL4R#%7B%22pageId%22%3A%22X3R_5GCPD2nqqYXSXyz-%22%7D">acessar</a>:</p>
+<p><a href="../../assets/GoFsComportamentais/uml_States.drawio.png"><img alt="Ver UML do State" src="../../assets/GoFsComportamentais/uml_States.drawio.png" /></a></p>
+<p>O diagrama acima ilustra a aplicação do <strong>Padrão de Projeto State</strong> para gerenciar o comportamento dinâmico das entidades de defesa no jogo, como a <code>Caipora</code>. A arquitetura desacopla o comportamento de uma entidade de sua classe principal, permitindo que ela mude de comportamento em tempo de execução.</p>
+<p>Os principais componentes do diagrama são:</p>
+<ul>
+<li>
+<p><strong><code>State</code> (Interface)</strong>: No topo, a interface <code>State</code> define o contrato que todos os estados concretos devem seguir. Ela declara os métodos essenciais que governam o ciclo de vida de um estado:</p>
+<ul>
+<li><code>enter(entity)</code>: Executado quando a entidade entra no estado.</li>
+<li><code>exit(entity)</code>: Executado quando a entidade sai do estado, para limpeza.</li>
+<li><code>update(entity)</code>: Chamado a cada quadro do jogo para executar a lógica do estado.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>IdleState</code> e <code>AttackingState</code> (Estados Concretos)</strong>: Estas classes implementam a interface <code>State</code> e encapsulam os comportamentos específicos.</p>
+<ul>
+<li><code>IdleState</code>: Representa o estado ocioso, onde a defesa pode estar aguardando inimigos. Sua lógica de <code>update</code> verifica as condições para transicionar para o <code>AttackingState</code> (por exemplo, se um inimigo entra no alcance).</li>
+<li><code>AttackingState</code>: Contém a lógica para quando a defesa está ativamente atacando. Seu <code>update</code> gerencia a animação de ataque e verifica se deve retornar ao <code>IdleState</code> (por exemplo, se não há mais inimigos na linha).</li>
+</ul>
+</li>
+<li>
+<p><strong><code>Defesa</code> (Contexto)</strong>: A classe <code>Defesa</code> atua como o Contexto. Ela mantém uma referência ao seu estado atual (um objeto que implementa <code>State</code>) e delega a execução do comportamento para esse objeto.</p>
+<ul>
+<li>Possui um método <code>set_state(newState)</code> que permite a si mesma ou aos objetos de estado alterar seu estado atual, executando os métodos <code>exit()</code> do estado antigo e <code>enter()</code> do novo.</li>
+<li>O método <code>update()</code> da <code>Defesa</code> simplesmente chama o <code>update()</code> de seu estado atual, garantindo que o comportamento correto seja executado.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>Caipora</code></strong>: É uma implementação concreta da <code>Defesa</code>, representando uma unidade específica do jogo que utiliza essa máquina de estados para controlar seu comportamento.</p>
+</li>
+</ul>
+<p>Essa estrutura permite que o comportamento da <code>Caipora</code> mude dinamicamente entre "ocioso" e "atacando" sem usar condicionais complexas dentro da classe <code>Caipora</code>, tornando o código mais limpo, organizado e fácil de estender com novos estados.</p>
+<h3 id="3352-opinioes-dos-participantes">3.3.5.2. Opiniões dos Participantes</h3>
+<p>A elaboração desta etapa foi realizada de forma colaborativa em reunião pelo <em>Discord</em>, não gravada, onde os três membros designados estiveram presentes e participaram ativamente da discussão/elaboração.
+O processo da execução do código foi feito no <em>Visual Studio Code</em> e a elaboração da UML foi feita no <em>Draw.io</em>, ferramenta que possibilitou a criação e edição simultânea do diagrama, garantindo integração e alinhamento entre os integrantes.</p>
+<p>Ao longo da atividade, cada integrante trouxe ideias e feedbacks que ajudaram a consolidar um resultado alinhado com a visão do grupo como um todo. Esse processo coletivo contribuiu tanto para a consistência do diagrama quanto para o fortalecimento da colaboração na equipe.</p>
+<details>
+  <summary><strong><a href="https://github.com/caioduart3">Caio Duarte</a></strong></summary>
+  <p>Gostei muito do padrão, achei algo bem diferente e fora da caixinha a lógica dele de controlar estados, creio que ele encaixou muito bem no nosso trabalho ao controlar os estados das entidades.</p>
+</details>
+
+<details>
+  <summary><strong><a href="https://github.com/MM4k">Marcelo Makoto</a></strong></summary>
+  <p>Implementar o padrão de States foi bem mais intuitivo do que eu imaginei no começo. Ele também se torna crucial no nosso projeto, visto que a quantidade de entidades aumentará cada vez mais com a evolução do jogo e esse padrão ajudará na organização do projeto e na implementação de novas entidades.</p>
+</details>
+
+<details>
+  <summary><strong><a href="https://github.com/VictorPontual">Victor Pontual</a></strong></summary>
+  <p>Implementar o State Pattern foi revelador — antes eu usava flags booleanas e condicionais espalhados para gerenciar comportamentos dos personagens, o que funcionava mas ficava confuso. Ao aprender o padrão formal, percebi que já fazia algo parecido de forma "casual", só que agora com estrutura adequada: cada comportamento virou uma entidade independente, transições ficaram explícitas, e adicionar novos estados se tornou trivial sem mexer no código existente. Foi daqueles momentos onde você aprende a nomenclatura oficial de algo que já fazia intuitivamente, transformando um "sistema improvisado" em arquitetura elegante e escalável.</p>
+</details>
+
+<h3 id="3353-video-demonstrativo">3.3.5.3. Vídeo Demonstrativo</h3>
+<p>Foi gravada, na plataforma do Microsoft Teams, uma reunião para a modelagem UML do padrão State e a execução do código além da explicação do mesmo. Clique <a href="https://www.youtube.com/embed/lNZ9JtHjowE">aqui</a> para acessar.</p>
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/lNZ9JtHjowE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<h2 id="336-referencias-bibliograficas">3.3.6 Referências Bibliográficas</h2>
+<blockquote>
+<p><a id="REF1">1.</a> GAMMA, Erich et al. <strong>Padrões de Projeto: Soluções Reutilizáveis de Software Orientado a Objetos</strong>. Tradução de C. F. Lucena e F. S. C. da Silva. Porto Alegre: Bookman, 2007. (Título original: <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>).</p>
+<p><a id="REF2">2.</a> SERRANO, Milene. Aula – GOFs Comportamentais. Arquitetura e Desenho de Software. Universidade de Brasília – UnB Gama, [s.d.]. Material de aula (apresentação de slides).</p>
+<p><a id="REF3">3.</a> FIGUEIREDO, Roberto Tenório. Padrões de Projeto GOF aplicados ao Desenvolvimento de Jogos Eletrônicos. 2014. 123 f. Dissertação (Mestrado em Ciência da Computação) – Universidade Federal de Pernambuco, Centro de Informática, Recife, 2014.</p>
+<p><a id="REF4">4.</a> UNITY CODER CORNER. Unity: The State Pattern. Medium, 2 de ago. de 2021. Disponível em: https://medium.com/unity-coder-corner/unity-the-state-pattern-ee067fe8bf1b. Acesso em: 24 de out. de 2025.</p>
+</blockquote>
+<h2 id="historico-de-versoes">Histórico de Versões 📅</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: center;">Descrição</th>
+<th style="text-align: center;">Autor(es)</th>
+<th style="text-align: center;">Revisor(es)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>0.1</code></td>
+<td style="text-align: center;">24/10/2025</td>
+<td style="text-align: center;">Adicionando Documentação GoF Comportamental</td>
+<td style="text-align: center;"><a href="https://github.com/felixlaryssa">Laryssa Felix</a></td>
+<td style="text-align: center;"><a href="https://github.com/caioduart3">Caio Duarte</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>0.2</code></td>
+<td style="text-align: center;">24/10/2025</td>
+<td style="text-align: center;">Ajustes Documentação GoF Comportamental</td>
+<td style="text-align: center;"><a href="https://github.com/felixlaryssa">Laryssa Felix</a>, <a href="" title="https://github.com/EnzoEmir">Enzo Emir</a>, <a href="https://github.com/RafaelSchadt">Rafael Welz</a></td>
+<td style="text-align: center;"><a href="https://github.com/caioduart3">Caio Duarte</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>0.3</code></td>
+<td style="text-align: center;">24/10/2025</td>
+<td style="text-align: center;">Adiciocionando Documentação Iterator</td>
+<td style="text-align: center;"><a href="https://github.com/danielle-soaress">Danielle Soares</a>, <a href="https://github.com/Leticia-Arisa-K-Higa">Leticia Arisa</a>, <a href="https://github.com/dudaa28">Maria Eduarda Andrade</a></td>
+<td style="text-align: center;"><a href="https://github.com/MM4k">Marcelo Makoto</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>0.4</code></td>
+<td style="text-align: center;">24/10/2025</td>
+<td style="text-align: center;">Adicionando Documentação GoF State</td>
+<td style="text-align: center;"><a href="https://github.com/MM4k">Marcelo Makoto</a></td>
+<td style="text-align: center;"><a href="https://github.com/dudaa28">Maria Eduarda Andrade</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://unbarqdsw2025-2-turma01.github.io/2025.2-T01-G1_JogoDigital_Entrega_03/" target="_blank" rel="noopener" title="unbarqdsw2025-2-turma01.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy", "navigation.instant", "navigation.instant.progress", "navigation.top"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
